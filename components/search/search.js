@@ -22,6 +22,12 @@ export default function Search({ setCity }) {
     }
   };
 
+
+
+
+
+  
+
   return (
     <div className='search'>
       <div className="search-input">
