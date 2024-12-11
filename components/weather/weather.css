@@ -1,0 +1,109 @@
+/* Body styling */
+body {
+  background: linear-gradient(to bottom right, #2c3e50, #4ca1af); /* Beautiful gradient */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 450px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Weather card styling */
+.weather-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  animation: slideUp 1s ease-out;
+  width: 80%;
+  max-width: 500px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon styling */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.weather-icon:hover {
+  transform: rotate(20deg); /* Slight hover effect */
+}
+
+/* Text styling inside weather card */
+.weather-card h2 {
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+.weather-card p {
+  font-size: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.details p {
+  font-size: 18px;
+  color: #c9d6e3;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .weather-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
