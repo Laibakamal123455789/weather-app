@@ -7,8 +7,11 @@ export default function Weather({ city }) {
 
   useEffect(() => {
     if (city) {
+      // fetch(`https://api.weatherapi.com/v1/current.json?key=f9c9912243994180a7b124942240710&q=${city}&aqi=no`)
+        
       fetch(`https://api.weatherapi.com/v1/current.json?key=f9c9912243994180a7b124942240710&q=${city}&aqi=no`)
-        .then((response) => response.json())
+
+      .then((response) => response.json())
         .then((data) => {
           if (data.error) {
             setWeather(null);
