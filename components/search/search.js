@@ -6,19 +6,19 @@ export default function Search({ setCity }) {
   const [cityInput, setCityInput] = useState("");
   const [error, setError] = useState("");
 
-  // Handle input change
+ 
   const handleInput = (e) => {
     setCityInput(e.target.value);
   };
 
-  // Handle search button click
-  const handleSearch = (e) => {
+ 
+ const handleSearch = (e) => {
     e.preventDefault();
     if (cityInput.trim() === "") {
       setError("City name cannot be empty!");
     } else {
       setError(""); // Clear error
-      setCity(cityInput); // Pass the city name to Weather component
+      setCity(cityInput.trim().toLowerCase()); // Normalize input before passing it
     }
   };
 
@@ -41,7 +41,7 @@ export default function Search({ setCity }) {
         <button onClick={handleSearch}>Search</button>
       </div>
 
-      {/* Show error message if any */}
+     
       {error && <div className="error-message">{error}</div>}
     </div>
   );
